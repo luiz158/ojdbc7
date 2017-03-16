@@ -1,0 +1,99 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.noraui</groupId>
+    <artifactId>ojdbc7</artifactId>
+    <version>12.1.0.2</version>
+    <packaging>jar</packaging>
+
+    <name>ojdbc7</name>
+
+    <description>Oracle JDBC Driver for java oracle.jdbc.driver.OracleDriver ojdbc7</description>
+
+    <url>https://github.com/NoraUi/ojdbc7</url>
+
+    <organization>
+        <name>NoraUi</name>
+        <url>https://github.com/NoraUi/ojdbc7</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>BSD license</name>
+            <comments>All source code is under the BSD license.</comments>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>sgrillon14</id>
+            <name>Stéphane GRILLON</name>
+        </developer>
+        <developer>
+            <id>ArKniiD </id>
+            <name>Nicolas HALLOUIN</name>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/NoraUi/ojdbc7.git</connection>
+        <developerConnection>scm:git:git@github.com:NoraUi/ojdbc7.git</developerConnection>
+        <url>git://github.com/NoraUi/ojdbc7.git</url>
+    </scm>
+
+    <dependencies>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>deploy</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <configuration>
+                            <useAgent>true</useAgent>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.7</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>sonatype-nexus</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>sonatype-nexus</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus</id>
+            <name>Nexus Release Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+</project>
