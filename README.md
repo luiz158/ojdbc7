@@ -5,7 +5,9 @@ Oracle JDBC Driver for java oracle.jdbc.driver.OracleDriver ojdbc7
 # How deploy to sonatype
 mvn clean install
 
-unzip .m2\repository\com\oracle\jdbc\ojdbc7\12.1.0.2\ojdbc7-12.1.0.2.jar -d destination_folder
+unzip .m2\repository\com\oracle\jdbc\ojdbc7\12.1.0.2\ojdbc7-12.1.0.2.jar -d .m2\repository\com\oracle\jdbc\ojdbc7\12.1.0.2\ojdbc7-12.1.0.2
+
+cd ojdbc  (this project directory)
 
 cp .m2\repository\com\oracle\jdbc\ojdbc7\12.1.0.2\ojdbc7-12.1.0.2\oracle target\classes\oracle
 
