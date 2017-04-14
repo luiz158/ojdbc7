@@ -24,3 +24,8 @@ mvn deploy -Pdeploy -Dmaven.main.skip=true -Dmaven.install.skip=true  (configure
     <version>12.1.0.2</version>
 </dependency>
 ```
+
+# License
+
+[![license](https://img.shields.io/github/license/NoraUi/ojdbc7.svg)](https://github.com/NoraUi/ojdbc7/blob/master/licence.txt)
+BSD, See License.txt for details
