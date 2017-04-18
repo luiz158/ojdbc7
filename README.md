@@ -25,6 +25,12 @@ mvn deploy -Pdeploy -Dmaven.main.skip=true -Dmaven.install.skip=true  (configure
 </dependency>
 ```
 
+# Contributors
+
+[![GitHub contributors](https://img.shields.io/github/contributors/NoraUi/ojdbc7.svg)](https://github.com/NoraUi/ojdbc7/graphs/contributors)
+[![GitHub closed pull requests](https://img.shields.io/github/issues-pr/NoraUi/ojdbc7.svg)](https://github.com/NoraUi/ojdbc7/pulls)
+[![GitHub issues](https://img.shields.io/github/issues/NoraUi/ojdbc7.svg)](https://github.com/NoraUi/ojdbc7/issues)
+
 # License
 
 [![license](https://img.shields.io/github/license/NoraUi/ojdbc7.svg)](https://github.com/NoraUi/ojdbc7/blob/master/licence.txt)
